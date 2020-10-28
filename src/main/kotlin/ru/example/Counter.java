@@ -1,4 +1,4 @@
-package ru.example.count;
+package ru.example;
 
 import java.io.*;
 import java.net.URL;
@@ -97,15 +97,9 @@ class Counter {
     }
 
     public static void main(String[] args) throws IOException {
-        System.out.println("Старт тестового задания - счётчик уникальных IP-адресов.");
-
-        List<String> ipies = Files.readAllLines(Paths.get("D:/work/Prototypes/ecwid/src/main/resources/ip.txt"));
-        Map<String, Long> duplicates = doCount(ipies);
-        System.out.println("Дубликаты: " + duplicates);
-
         System.out.println("Старт тестового задания - счётчик уникальных IP-адресов на реально БОЛЬШОМ файле.");
         Counter counter = new Counter();
-        counter.get();              // получение и разбор zip
+        counter.get();         // получение и разбор zip
         counter.doCount(2);    // фильтрация
         System.out.println("Конец тестового задания - счётчик уникальных IP-адресов на реально БОЛЬШОМ файле.");
     }
